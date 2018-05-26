@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+	  margin: 0;
+	  padding: 0;
+}
+
+body {
+    background-image: radial-gradient(#fcefde 30%, #e5967b 100%);
+}
+.box {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+h1 {
+    width: 80%;
+    margin: 1rem auto 0;
+    text-align: center;
+}
+.search-wrap {
+    margin: 1rem auto;
+    text-align: center;
+}
+#search {
+    margin: 0;
+    width: 40%;
+    height: 2rem;
+    border-radius: 30px;
+    border: none;
+    text-indent: 5px;
+    transition: width, .5s;
+    padding: 20px 10px;
+}
+#search:focus {
+    width: 65%;
+    border: 1px solid #BC8F8F;
+}    
+input::placeholder {
+	font-size: 0.8rem;
+	color: #8B4513;
+}
+i {
+	margin-left: 6px;
+}
+#container {
+    width: 100%;
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+}
+.thumbnails {
+    margin: 1rem;
+}
+img {
+	box-shadow: 6px 6px 50px 0px rgba(117,112,117,1);
+}
+
+@media (min-width:600px) {
+    .box {
+        width: 90%;
+    }
+	h1 {
+    width: 80%;
+    margin: 2rem 0 0 8px;
+    text-align: left;
+    }
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #search:focus {
+        width: 70%;
+    }
+	input::placeholder {
+	    font-size: 1rem;
+	    color: #8B4513;
+    }
+}
+
+@media (min-width:900px) {
+    .box {
+        width: 78%;
+    }
+	h1 {
+    width: 80%;
+    margin: 2rem 0 0 8px;
+    text-align: left;
+    }
+    #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1rem auto;
+    }
+    #search:focus {
+        width: 80%;
+    }
+	input::placeholder {
+	    font-size: 1.15rem;
+	    color: #800000;
+    }
+}
+
+@media (min-width:1240px) {
+    .box {
+        width: 77%;
+    }
+	h1 {
+    width: 80%;
+    margin: 2rem 0 0 8px;
+    text-align: left;
+    }
+    #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #search {
+        width: 30%;
+    }
+    #search:focus {
+        width: 60%;
+    }
+	input::placeholder {
+	    font-size: 1.2rem;
+	    color: #800000;
+    }
+}
