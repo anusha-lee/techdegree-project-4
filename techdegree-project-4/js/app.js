@@ -1,22 +1,19 @@
 //search photos
+const input = document.getElementById('search');
+const container = document.querySelector('#container');
+const imgLinks = container.querySelectorAll('a');
 
-const input = document.getElementById("search");
-const caption = document.querySelectorAll("a[data-caption]");
-
-input.addEventListener("keyup", function(event) {
-	let searchResult = input.value.toUpperCase();
+input.addEventListener("keyup", () => {
 	
-	for (i = 0; i < caption.length; i++) {
-		const photoList = document.getElementsByTagName("a");
-		if (searchResult.includes(caption)) {
-		    photoList.style.display = '';			
+	// Visitor types keyword in the search box
+    let searchResult = input.value.toLowerCase();
+	
+    for (let i = 0; i < imgLinks.length; i++) {
+		let caption = imgLinks[i].getAttribute('data-caption');
+		if (caption.includes(searchResult)) {
+			imgLinks[i].style.display = '';
 		} else {
-			photoList.style.display = 'none';
-			
-		}		
-	}	
-})
-
-
-
-
+			imgLinks[i].style.display = 'none';
+		}
+	}
+});

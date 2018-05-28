@@ -54,6 +54,10 @@ i {
 }
 img {
 	box-shadow: 6px 6px 50px 0px rgba(117,112,117,1);
+	transition: all .5s ease-in-out;
+}
+img:hover {
+	transform: scale(1.1);
 }
 
 @media (min-width:600px) {
